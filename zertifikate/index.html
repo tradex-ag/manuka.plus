@@ -17,7 +17,8 @@ h1{font-weight:600;font-size:clamp(32px,6vw,44px);line-height:1.1;letter-spacing
 p.lead{color:var(--graphite);max-width:70ch;margin:0 0 48px;text-wrap:pretty}
 ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
 li{border-bottom:1px solid var(--line);padding:24px 0;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
-h2{font-size:20px;font-weight:600;letter-spacing:-.02em;margin:0 0 4px}
+h2{font-size:24px;font-weight:600;letter-spacing:-.02em;margin:0 0 4px}
+.sub{font-size:14px;color:var(--graphite)}
 .meta{font:400 12px/1.5 "JetBrains Mono",ui-monospace,Menlo,monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-variant-numeric:tabular-nums}
 a.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border:1px solid var(--ink);border-radius:var(--r);color:var(--ink);text-decoration:none;font-weight:500;white-space:nowrap;transition:background-color var(--duration-quick),color var(--duration-quick)}
 a.btn:hover{background:var(--ink);color:var(--white)}
@@ -35,24 +36,27 @@ footer a{color:var(--ink)}
   <ul>
     <li>
       <div>
-        <h2>Charge L22092 · Fass 1 · Manuka 550+</h2>
-        <div class="meta">Prüfbericht 210-1424867 · 16.12.2024 · 13 Seiten</div>
-      </div>
-      <a class="btn" href="l22092-fass-1-manuka-550.pdf">PDF öffnen</a>
-    </li>
-    <li>
-      <div>
-        <h2>Charge L22094 · Fass 1, 2, 3, 4</h2>
+        <h2>MGO 300</h2>
+        <div class="sub">Charge L22094 · Fass 1, 2, 3, 4</div>
         <div class="meta">Prüfbericht 210-1524758 · 17.06.2025 · 4 Seiten</div>
       </div>
-      <a class="btn" href="l22094-fass-1-2-3-4.pdf">PDF öffnen</a>
+      <a class="btn" href="l22094-fass-1-2-3-4.pdf" aria-label="MGO 300 PDF öffnen">PDF öffnen</a>
     </li>
     <li>
       <div>
-        <h2>Charge L22095 · Sammelbericht</h2>
+        <h2>MGO 550</h2>
+        <div class="sub">Charge L22092 · Fass 1</div>
+        <div class="meta">Prüfbericht 210-1424867 · 16.12.2024 · 13 Seiten</div>
+      </div>
+      <a class="btn" href="l22092-fass-1-manuka-550.pdf" aria-label="MGO 550 PDF öffnen">PDF öffnen</a>
+    </li>
+    <li>
+      <div>
+        <h2>MGO 900</h2>
+        <div class="sub">Charge L22095 · Sammelbericht</div>
         <div class="meta">Prüfbericht 210-1517954 · 06.06.2025 · 15 Seiten</div>
       </div>
-      <a class="btn" href="l22095-sammelbericht.pdf">PDF öffnen</a>
+      <a class="btn" href="l22095-sammelbericht.pdf" aria-label="MGO 900 PDF öffnen">PDF öffnen</a>
     </li>
   </ul>
   <footer>TradeX International AG · Schindellegi</footer>
