@@ -3,63 +3,103 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Laborzertifikate · Manuka.Plus</title>
-<meta name="description" content="Prüfberichte der Quality Services International GmbH (QSI, Bremen) zu unseren Manuka-Honig-Chargen.">
+<title>Laborzertifikate · Manuka Plus</title>
+<meta name="description" content="Unabhängige Prüfberichte der Quality Services International GmbH (QSI, Bremen) zu unserem Manuka-Honig MGO 300, MGO 550 und MGO 900.">
 <style>
-:root{--white:#fff;--paper:#F8F9FA;--ink:#111;--graphite:#303030;--line:#E8E8E8;--muted:#6A6E73;--accent:#111;--r:2px;--duration-quick:150ms}
+@font-face{font-family:Montserrat;font-weight:400;font-display:swap;src:url(../assets/fonts/montserrat-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Montserrat;font-weight:600;font-display:swap;src:url(../assets/fonts/montserrat-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Montserrat;font-weight:800;font-display:swap;src:url(../assets/fonts/montserrat-latin-800-normal.woff2) format("woff2")}
+:root{
+  --navy:#2E2B7C;--navy-hover:#24216A;--orange:#F18A00;--orange-text:#B85F00;
+  --cream:#F7EADB;--cream-deep:#EFD9C0;--card:#FFFFFF;--ink:#2A2440;--muted:#5E5873;--line:#E6D3BC;
+  --r-sm:8px;--r-lg:16px;--duration-quick:150ms;--ease:cubic-bezier(.22,1,.36,1)
+}
 *{box-sizing:border-box}
 html{-webkit-font-smoothing:antialiased}
-body{margin:0;background:var(--white);color:var(--ink);font:400 16px/1.6 Geist,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-main{max-width:880px;margin:0 auto;padding:64px clamp(16px,4vw,48px) 96px}
-.eyebrow{font:500 12px/1 "JetBrains Mono",ui-monospace,Menlo,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;gap:8px;align-items:center}
-.eyebrow::before{content:"";width:8px;height:8px;background:var(--accent)}
-h1{font-weight:600;font-size:clamp(32px,6vw,44px);line-height:1.1;letter-spacing:-.04em;margin:16px 0 16px;text-wrap:balance}
-p.lead{color:var(--graphite);max-width:70ch;margin:0 0 48px;text-wrap:pretty}
-ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
-li{border-bottom:1px solid var(--line);padding:24px 0;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
-h2{font-size:24px;font-weight:600;letter-spacing:-.02em;margin:0 0 4px}
-.sub{font-size:14px;color:var(--graphite)}
-.meta{font:400 12px/1.5 "JetBrains Mono",ui-monospace,Menlo,monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-variant-numeric:tabular-nums}
-a.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border:1px solid var(--ink);border-radius:var(--r);color:var(--ink);text-decoration:none;font-weight:500;white-space:nowrap;transition:background-color var(--duration-quick),color var(--duration-quick)}
-a.btn:hover{background:var(--ink);color:var(--white)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-footer{margin-top:48px;color:var(--muted);font-size:14px}
-footer a{color:var(--ink)}
-@media (prefers-reduced-motion:reduce){a.btn{transition:none}}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.6 Montserrat,system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+.hero{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-deep) 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;padding-top:64px;padding-bottom:48px}
+.kicker{font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin:0 0 8px}
+h1{font-weight:800;font-size:clamp(26px,7.4vw,56px);line-height:1.05;letter-spacing:-.01em;text-transform:uppercase;color:var(--orange);margin:0 0 24px;text-wrap:balance}
+.rule{width:72px;height:3px;background:var(--orange);border:0;margin:0 0 24px}
+.lead{max-width:52ch;margin:0;color:var(--ink);font-size:17px;text-wrap:pretty}
+.hero img{width:100%;max-width:380px;height:auto;justify-self:center;mix-blend-mode:multiply;aspect-ratio:1}
+main.wrap{padding-top:48px;padding-bottom:96px}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+li{background:var(--card);border-radius:var(--r-lg);padding:24px;display:flex;gap:24px;align-items:center;box-shadow:0 1px 2px rgb(46 43 124 / .06),0 8px 24px rgb(46 43 124 / .06)}
+.badge{flex:none;width:88px;height:96px;background:var(--orange);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:14px;clip-path:polygon(50% 0,100% 22%,100% 100%,0 100%,0 22%);font-weight:800;line-height:1.05;text-align:center}
+.badge b{font-size:26px}
+.badge span{font-size:14px;letter-spacing:.04em}
+.info{flex:1;min-width:0}
+h2{font-weight:800;font-size:22px;color:var(--navy);margin:0 0 4px;letter-spacing:-.01em}
+.sub{font-size:15px;font-weight:600;color:var(--ink)}
+.meta{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+a.btn{flex:none;display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:var(--r-sm);background:var(--navy);color:#fff;text-decoration:none;font-weight:600;white-space:nowrap;transition:background-color var(--duration-quick) var(--ease)}
+a.btn:hover{background:var(--navy-hover)}
+a.btn:active{transform:scale(.96)}
+a:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.note{margin:32px 0 0;font-size:14px;color:var(--muted);max-width:70ch}
+.shop{display:inline-flex;align-items:center;min-height:48px;margin-top:24px;padding:0 24px;border-radius:var(--r-sm);border:2px solid var(--navy);color:var(--navy);font-weight:600;text-decoration:none}
+.shop:hover{background:var(--navy);color:#fff}
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-top:24px;padding-bottom:32px;font-size:14px;color:var(--muted)}
+@media (max-width:767px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:40px;gap:8px}
+  .hero img{max-width:240px;order:-1}
+  li{flex-wrap:wrap;gap:16px;padding:20px}
+  .badge{width:72px;height:80px;padding-top:12px}
+  .badge b{font-size:22px}
+  .info{flex-basis:calc(100% - 88px)}
+  a.btn{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){a.btn{transition:none}a.btn:active{transform:none}}
 </style>
 </head>
 <body>
-<main>
-  <div class="eyebrow">Manuka.Plus</div>
-  <h1>Laborzertifikate</h1>
-  <p class="lead">Unsere Manuka-Chargen lassen wir unabhängig bei der Quality Services International GmbH (QSI) in Bremen prüfen. Hier finden Sie die vollständigen Prüfberichte als PDF.</p>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Manuka Plus · Manuka-Honig aus Neuseeland</p>
+      <h1>Laborzertifikate</h1>
+      <hr class="rule">
+      <p class="lead">Jede Charge lassen wir unabhängig bei der Quality Services International GmbH (QSI) in Bremen prüfen. Hier finden Sie die vollständigen Prüfberichte als PDF.</p>
+    </div>
+    <img src="../assets/manuka-plus-glas.jpg" width="900" height="900" alt="Glas Manuka Plus Manuka-Honig 550+ MGO, 250 g">
+  </div>
+</header>
+<main class="wrap">
   <ul>
     <li>
-      <div>
+      <div class="badge" aria-hidden="true"><b>300+</b><span>MGO</span></div>
+      <div class="info">
         <h2>MGO 300</h2>
         <div class="sub">Charge L22094 · Fass 1, 2, 3, 4</div>
-        <div class="meta">Prüfbericht 210-1524758 · 17.06.2025 · 4 Seiten</div>
+        <div class="meta">Prüfbericht 210-1524758, 17.06.2025, 4 Seiten</div>
       </div>
-      <a class="btn" href="l22094-fass-1-2-3-4.pdf" aria-label="MGO 300 PDF öffnen">PDF öffnen</a>
+      <a class="btn" href="l22094-fass-1-2-3-4.pdf" aria-label="Prüfbericht MGO 300 als PDF öffnen">PDF öffnen</a>
     </li>
     <li>
-      <div>
+      <div class="badge" aria-hidden="true"><b>550+</b><span>MGO</span></div>
+      <div class="info">
         <h2>MGO 550</h2>
         <div class="sub">Charge L22092 · Fass 1</div>
-        <div class="meta">Prüfbericht 210-1424867 · 16.12.2024 · 13 Seiten</div>
+        <div class="meta">Prüfbericht 210-1424867, 16.12.2024, 13 Seiten</div>
       </div>
-      <a class="btn" href="l22092-fass-1-manuka-550.pdf" aria-label="MGO 550 PDF öffnen">PDF öffnen</a>
+      <a class="btn" href="l22092-fass-1-manuka-550.pdf" aria-label="Prüfbericht MGO 550 als PDF öffnen">PDF öffnen</a>
     </li>
     <li>
-      <div>
+      <div class="badge" aria-hidden="true"><b>900+</b><span>MGO</span></div>
+      <div class="info">
         <h2>MGO 900</h2>
         <div class="sub">Charge L22095 · Sammelbericht</div>
-        <div class="meta">Prüfbericht 210-1517954 · 06.06.2025 · 15 Seiten</div>
+        <div class="meta">Prüfbericht 210-1517954, 06.06.2025, 15 Seiten</div>
       </div>
-      <a class="btn" href="l22095-sammelbericht.pdf" aria-label="MGO 900 PDF öffnen">PDF öffnen</a>
+      <a class="btn" href="l22095-sammelbericht.pdf" aria-label="Prüfbericht MGO 900 als PDF öffnen">PDF öffnen</a>
     </li>
   </ul>
-  <footer>TradeX International AG · Schindellegi</footer>
+  <a class="shop" href="https://www.amazon.de/dp/B0G4X7DW7X?th=1">Zum Shop auf Amazon</a>
 </main>
+<footer><div class="wrap">Abgefüllt von TradeX International AG · Schindellegi</div></footer>
 </body>
 </html>
